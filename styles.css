@@ -4,10 +4,10 @@ body {
     padding: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column;  /* ترتيب العناصر عموديًا */
-    align-items: center;  /* توسيط المحتوى أفقيًا */
+    flex-direction: column;  
+    align-items: center;  
     background-color: #f4f4f4;
-    text-align: center;  /* محاذاة النص في المنتصف */
+    text-align: center;  
 }
 
 h1 {
@@ -18,20 +18,20 @@ h1 {
 
 div {
     width: 100%;
-    max-width: 500px;  /* تحديد الحد الأقصى للعرض */
+    max-width: 500px;  
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* المسافة بين كل نموذج */
-    box-sizing: border-box;  /* لحساب الحواف الداخلية في الحجم الكلي */
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* محاذاة المحتوى للأعلى */
+    justify-content: flex-start;
 }
 
 input {
@@ -42,7 +42,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* تأكد من احتساب الحواف الداخلية */
+    box-sizing: border-box; 
 }
 
 button {
