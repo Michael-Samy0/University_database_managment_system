@@ -1,23 +1,23 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
-const cors = require('cors'); // Import cors
+const cors = require('cors'); 
 const app = express();
 
-// Middleware to parse JSON
+
 app.use(express.json());
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500', // Allow only this origin
-    methods: ['GET', 'POST'],       // Allowed HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    origin: 'http://127.0.0.1:5500', 
+    methods: ['GET', 'POST'],       
+    allowedHeaders: ['Content-Type', 'Authorization'], 
 };
 
 app.use(cors(corsOptions));
 
-// Middleware
+
 app.use(bodyParser.json());
 
-// Database Configuration
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -25,7 +25,7 @@ const db = mysql.createConnection({
     database: 'university_data',
 });
 
-// Connect to MySQL
+
 db.connect(err => {
     if (err) {
         console.error('Error connecting to MySQL:', err);
@@ -34,7 +34,7 @@ db.connect(err => {
     console.log('Connected to MySQL database.');
 });
 
-// Add Student API
+
 app.post('/add-student', (req, res) => {
     const { firstName, lastName, email, enrollmentYear, collegeId } = req.body;
     const query = 'INSERT INTO students (first_name, last_name, email, enrollment_year, college_id) VALUES (?, ?, ?, ?, ?)';
@@ -47,7 +47,7 @@ app.post('/add-student', (req, res) => {
     });
 });
 
-// Get College Name by Student ID API
+
 app.get('/get-college-name/:studentId', (req, res) => {
     const studentId = req.params.studentId;
     const query = `SELECT colleges.name FROM students JOIN colleges ON students.college_id = colleges.id WHERE students.id = ?`;
@@ -60,7 +60,7 @@ app.get('/get-college-name/:studentId', (req, res) => {
     });
 });
 
-// Get Courses by Student ID API
+
 app.get('/get-courses/:studentId', (req, res) => {
     const studentId = req.params.studentId;
     const query = `
