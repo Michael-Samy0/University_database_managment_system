@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>University Data Management</h1>
+
+<div>
+    <h2>Add Student</h2>
+    <form id="studentForm">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="enrollmentYear" placeholder="Enrollment Year" required>
+        <input type="number" id="collegeId" placeholder="College ID" required>
+        <button type="submit">Add Student</button>
+    </form>
+</div>
+
+<!-- <div>
+    <h2>Add College</h2>
+    <form id="collegeForm">
+        <input type="text" id="collegeName" placeholder="College Name" required>
+        <input type="text" id="collegeLocation" placeholder="College Location" required>
+        <button type="submit">Add College</button>
+    </form>
+</div> -->
+
+
+
+<div>
+    <h2>Get College Name by Student ID</h2>
+    <input type="number" id="studentIdForCollege" placeholder="Enter Student ID">
+    <button onclick="getCollegeName()">Get College Name</button>
+    <p id="collegeNameResult"></p>
+</div>
+
+<div>
+    <h2>Get Courses by Student ID</h2>
+    <input type="number" id="studentIdForCourses" placeholder="Enter Student ID">
+    <button onclick="getCourses()">Get Courses</button>
+    <ul id="coursesList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
