@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* ترتيب العناصر عموديًا */
+    align-items: center;  /* توسيط المحتوى أفقيًا */
+    background-color: #f4f4f4;
+    text-align: center;  /* محاذاة النص في المنتصف */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+div {
+    width: 100%;
+    max-width: 500px;  /* تحديد الحد الأقصى للعرض */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* المسافة بين كل نموذج */
+    box-sizing: border-box;  /* لحساب الحواف الداخلية في الحجم الكلي */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* محاذاة المحتوى للأعلى */
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* تأكد من احتساب الحواف الداخلية */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="number"], input[type="email"] {
+    max-width: 400px;
+}
+
+#collegeName, #collegeLocation, #firstName, #lastName, #email, #enrollmentYear, #collegeId {
+    max-width: 400px;
+}
