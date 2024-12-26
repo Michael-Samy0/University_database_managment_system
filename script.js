@@ -1,25 +1,3 @@
-// // Add College
-// document.getElementById('collegeForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
-
-//     const collegeName = document.getElementById('collegeName').value;
-//     const collegeLocation = document.getElementById('collegeLocation').value;
-
-//     fetch('http://localhost:3000/add-college', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ name: collegeName, location: collegeLocation })
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         alert('College added successfully!');
-//     })
-//     .catch(error => {
-//         console.error('Error:', error);
-//     });
-// });
-
-// Add Student
 document.getElementById('studentForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -43,7 +21,6 @@ document.getElementById('studentForm').addEventListener('submit', function(event
     });
 });
 
-// Add College
 document.getElementById('collegeForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -64,7 +41,7 @@ document.getElementById('collegeForm').addEventListener('submit', function(event
     });
 });
 
-// Get College Name by Student ID
+
 function getCollegeName() {
     const studentId = document.getElementById('studentIdForCollege').value;
 
@@ -78,7 +55,7 @@ function getCollegeName() {
     });
 }
 
-// Get Courses by Student ID
+
 function getCourses() {
     const studentId = document.getElementById('studentIdForCourses').value;
 
